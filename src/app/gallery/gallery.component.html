@@ -1,5 +1,5 @@
 <div class="row">
-    <div *ngIf="isLoading">Loading ...</div>
+    <div class="alert" *ngIf="isLoading">Loading ...</div>
     <ng-container *ngIf="!isLoading">
         <div class="gallery" *ngFor="let image of gallery">
             <img [src]="image.src"/>

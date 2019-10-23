@@ -26,7 +26,7 @@ const httpOptions = {
 @Injectable()
 export class GalleryService {
   private apiKey = '4ed03457cc5c12faa1d2ca6902bf7069';
-  private perPage = 100;
+  private perPage = 10000;
   //. https://github.com/Rob--W/cors-anywhere/#documentation
   private corsUrl = 'https://cors-anywhere.herokuapp.com/';
   private flickrApiUrl = 'https://api.flickr.com';
