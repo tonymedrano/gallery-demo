@@ -13,7 +13,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { GalleryService } from '../services/gallery.service';
-import { map } from "rxjs/operators";
 
 @Component({
     selector: 'app-gallery',
@@ -35,8 +34,13 @@ export class GalleryComponent implements OnInit {
 
     imagesGallery(search: string, page: number) {
         this.galleryService.getImagesData(search, page).subscribe(res => {
-            this.gallery = [...this.gallery, ...res];
+            // this.gallery = [...this.gallery, ...res];
+            for (let index of Array(20).keys()) { //. for demo only (bad practice)
+                this.gallery.push(...res);
+            } // scrolling-loading under demand is the way
             this.isLoading = false;
+            console.log(this.gallery);
+            
         });
     }
 

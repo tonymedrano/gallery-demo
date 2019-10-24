@@ -16,8 +16,9 @@ div.gallery {
   }
 
   .gallery-viewport{
-    height: 1200px;
+    height: 800px;
     width: 100%;
+    border: 1px solid saddlebrown;
     display: flex;
     margin-left: 50px;
    }
