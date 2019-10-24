@@ -35,10 +35,7 @@ export class GalleryComponent implements OnInit {
 
     imagesGallery(search: string, page: number) {
         this.galleryService.getImagesData(search, page).subscribe(res => {
-            // this.gallery = [...this.gallery, ...res];
-            for (let index of Array(20).keys()) { //. for demo only (bad practice)
-                this.gallery.push(...res);
-            } // scrolling-loading under demand is the way
+            this.gallery = [...this.gallery, ...res];
             this.isLoading = false;
         });
     }

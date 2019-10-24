@@ -1,8 +1,10 @@
 <div class="row">
     <div class="alert" *ngIf="isLoading">Loading ...</div>
+    <cdk-virtual-scroll-viewport itemSize="20" class="gallery-viewport">
     <ng-container *ngIf="!isLoading">
-        <div class="gallery" *ngFor="let image of gallery">
+        <div class="gallery" *cdkVirtualFor="let image of gallery">
             <img [src]="image.src"/>
         </div>
     </ng-container>
+</cdk-virtual-scroll-viewport>
 </div>

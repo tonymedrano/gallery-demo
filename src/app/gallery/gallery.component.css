@@ -14,3 +14,10 @@ div.gallery {
     margin-bottom: 0!important;
     overflow: hidden;
   }
+
+  .gallery-viewport{
+    height: 1200px;
+    width: 100%;
+    display: flex;
+    margin-left: 50px;
+   }
